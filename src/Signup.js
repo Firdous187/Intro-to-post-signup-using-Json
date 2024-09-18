@@ -20,6 +20,8 @@ function Signup() {
             age: ageInputRef.current.value,
             email: emailInputRef.current.value,
             password: passwordInputRef.current.value,
+           // mobileNo: mobileNumberInputRef.current.value,
+           mobileNumber: mobileNumberInputRef.current.value,
             profilePic: profilePicInputRef.current.value,
         }
 

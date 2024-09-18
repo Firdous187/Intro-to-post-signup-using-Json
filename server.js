@@ -37,7 +37,7 @@ let userSchema = new mongoose.Schema({
       },
       mobileNumber:{
        type: String,
-       require:[true,"Mobile No is require"],
+       require:[true,"Mobile No is required"],
        RegExp:[/^[6-9]\d{9}$/,"Mobile No is require"],
       },
       profilePic:{
@@ -46,7 +46,7 @@ let userSchema = new mongoose.Schema({
 
 });
 
-let user = new mongoose.model("user", userSchema);
+let User = new mongoose.model("User", userSchema);
 
 
 app.post("/signup", async (req,res) =>{
@@ -54,7 +54,7 @@ app.post("/signup", async (req,res) =>{
 
     //res.json(["signup dummy response"]);
     try{
-        let newUser = new user({
+        let newUser = new User({
             firstName:req.body.firstName,
             lastName: req.body.lastName,
             age: req.body.age,
